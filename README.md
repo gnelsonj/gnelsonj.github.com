@@ -1,4 +1,3 @@
-gnelsonj.github.com
-===================
+#gnelsonj
 
-Personal website.
+My new personal website built on Jekyll.

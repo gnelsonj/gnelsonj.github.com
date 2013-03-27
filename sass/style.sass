@@ -1,0 +1,260 @@
+// gnelsonj.com
+
+// imports
+@import "compass/utilities/general/clearfix"
+@import "compass/css3"
+
+// Type
+$baseFontSize:      1rem
+$lineHeight:        1.7
+$serif:             'PT Serif', georgia, 'Times New Roman', 'Times', serif
+$sansSerif:         helvetica, arial, sans-serif
+$h1Size:            2.5rem
+$h2Size:            1.666rem
+$h3Size:            1rem
+$h4-6Size:          1em
+
+
+// colors
+$borderColor:       #ddd
+$typeColor:         #444
+$lightTypeColor:    lighten($typeColor, 40%)
+$linkColor:         #3288E6
+
+//layout
+$smallWidth:        768px
+$mediumWidth:       $smallWidth * 1.25
+$largeWidth:        $smallWidth * 1.5
+$border:            1px dotted #ccc
+
+@mixin column($size: wide)
+    margin-left: auto
+    margin-right: auto
+    padding: 0 5%
+
+    @if $size == skinny
+        max-width: $smallWidth * 0.6875
+        @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+            max-width: ($mediumWidth) * 0.6875
+        @media all and (min-width: 1152px) and (min-height: 1000px)
+            max-width: ($largeWidth) * 0.6875
+
+    @else
+        max-width: $smallWidth
+        @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+            max-width: $mediumWidth
+        @media all and (min-width: 1152px) and (min-height: 1000px)
+            max-width: $largeWidth 
+
+html
+    font-size: 100%
+    @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+        font-size: 125%
+    @media all and (min-width: 1152px) and (min-height: 1000px)
+        font-size: 150%
+        
+
+body
+    margin: 0
+    font-family: $serif
+    font-size: $baseFontSize
+    color: $typeColor
+    line-height: $lineHeight + em
+
+    
+
+h1, h2, h3, h4, h5, h6
+    font-family: $serif
+    line-height: 1.2em
+    font-weight: 700
+    text-rendering: optimizeLegibility
+    margin-top: $lineHeight + rem
+    margin-bottom: $lineHeight + rem
+
+h1
+    font-size: $h1Size
+
+h2
+    font-size: $h2Size
+
+h3
+    font-size: $h3Size
+    text-transform: uppercase
+
+h4, h5, h6
+    font-size: $h4-6Size
+
+p
+    margin: 0
+
+p + p
+    margin-top: $lineHeight + em
+
+ul, ol
+    margin: $lineHeight + rem 0
+    padding: 0
+
+    &.no-bullets
+        list-style: none
+
+    &.inline
+        +pie-clearfix()
+
+        li
+            margin: 0 1em
+            display: inline-block
+
+.centered
+    text-align: center
+
+a
+    text-decoration: none
+
+#header
+    font-family: $serif
+    padding: 0
+    @include column(skinny)
+
+    #navigation
+        +pie-clearfix()
+        border-bottom: $border
+
+        .nav-item
+            width: 33%
+            float: left
+            text-transform: uppercase
+            text-align: center
+            letter-spacing: 0.15em
+            line-height: 6rem
+
+            a
+                color: $lightTypeColor
+                font-size: .8rem
+                &:hover
+                    color: $typeColor
+        
+        .logo
+            background: #EEE
+            display: block
+            height: 3rem
+            margin: 1.5rem auto
+            width: 3rem
+            line-height: 3rem
+            +border-radius(3rem)
+            font-weight: bold
+            letter-spacing: normal
+
+#main 
+    p, figure, pre, cite, blockquote, h2, h3, h4, h5, h6, ul, ol, .skinny-container
+        @include column(skinny)
+
+    img
+        display: block
+        max-width: 100%
+        margin:
+            right: auto
+            left: auto
+
+    h1, .wide-container
+        @include column(wide)
+
+    h1, h2, h3
+        text-align: center
+
+    header
+        margin: $lineHeight*2 + rem 0
+
+    a
+        color: $typeColor
+        border-bottom: 1px dotted $typeColor
+        &:hover
+            color: $linkColor
+            border-color: $linkColor
+
+    ol, ul
+        @media all and (max-width: 1151px)
+            padding-left: 30px
+
+    #post
+        &:after
+            display: block
+            content: "***"
+            text-align: center
+            font-size: 2rem
+            margin: $lineHeight + rem 0
+
+        header
+
+            h2
+                font-size: 1em
+                font-weight: 400
+                color: $lightTypeColor
+
+        img
+            margin: 
+                top: $lineHeight + rem
+                bottom: $lineHeight + rem
+            
+        .block-image
+            max-height: 30rem
+
+        .full-width-image
+            padding: 0
+            max-width: 100%
+
+        .floated-image
+            display: inline
+
+            &.left
+                float: left
+            &.right
+                float: right
+
+    #about
+        &:before
+            border-top: $border
+
+        img
+            margin-bottom: $lineHeight + rem
+
+    #blog-list
+        @include column(skinny)
+        
+        .post
+            
+            + .post
+                border-top: $border
+
+            a
+                +pie-clearfix()
+                display: block
+                padding: 0.5em 0
+                border: 0
+                &:hover
+                    
+                    .post-title
+                        &:after
+                            margin-left: 5px
+                            display: inline
+                            content: '\2192'
+
+            .post-title
+                width: 80%
+                float: right
+
+            .post-date
+                width: 20%
+                float: left
+                color: #999
+
+#footer
+    @include column(skinny)
+    padding: $lineHeight + rem 0
+    margin-top: $lineHeight*3 + rem
+    color: $lightTypeColor
+    text-align: center
+    border-top: $border
+    font-size: .8rem
+
+    a
+        color: $lightTypeColor

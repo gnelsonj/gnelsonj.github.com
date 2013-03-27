@@ -1,0 +1,19 @@
+auto : true
+permalink : /:title/
+exclude : ['sass', 'config.rb', 'README.md']
+
+title : Nelson Joyce | Digital Product Designer
+description : Thoughts on digital product design by Nelson Joyce.
+url : http://gnelsonj.com
+author :
+  firstName : Nelson
+  lastName : Joyce
+  jobTitle : Digital Product Designer
+  email : nellyvan@gmail.com
+  github : gnelsonj
+  linkedIn : gnelsonj
+  twitter : nelsonjoyce
+  dribbble : nelsonjoyce
+  googlePlus : 116388594856737469980
+  feedBurner : nelsonjoyce
+  location : Boston MA
