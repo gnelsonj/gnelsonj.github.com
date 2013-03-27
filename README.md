@@ -1,3 +1,3 @@
 #gnelsonj
 
-My new personal website built on Jekyll.
+My personal site hoted on GitHub and built on Jekyll.
