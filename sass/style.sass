@@ -23,9 +23,8 @@ $lightTypeColor:    lighten($typeColor, 40%)
 $linkColor:         #3288E6
 
 //layout
-$smallWidth:        768px
-$mediumWidth:       $smallWidth * 1.25
-$largeWidth:        $smallWidth * 1.5
+$columnWidth:       35rem
+$wideColumnWidth:   $columnWidth*1.45
 $border:            1px dotted #ccc
 
 @mixin column($size: wide)
@@ -34,25 +33,19 @@ $border:            1px dotted #ccc
     width: 90%
 
     @if $size == skinny
-        max-width: $smallWidth * 0.6875
-        @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
-            max-width: ($mediumWidth) * 0.6875
-        @media all and (min-width: 1152px) and (min-height: 1000px)
-            max-width: ($largeWidth) * 0.6875
+        max-width: $columnWidth
+        @media all and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+            max-width: $columnWidth
 
     @else
-        max-width: $smallWidth
-        @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
-            max-width: $mediumWidth
-        @media all and (min-width: 1152px) and (min-height: 1000px)
-            max-width: $largeWidth 
+        max-width: $wideColumnWidth
+        @media all and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+            max-width: $wideColumnWidth
 
 html
     font-size: 100%
-    @media all and (max-width: 1151px) and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+    @media all and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
         font-size: 125%
-    @media all and (min-width: 1152px) and (min-height: 1000px)
-        font-size: 150%
         
 
 body
@@ -66,8 +59,8 @@ body
 
 h1, h2, h3, h4, h5, h6
     font-family: $serif
-    line-height: 1.2em
     font-weight: 700
+    line-height: 1.2em
     text-rendering: optimizeLegibility
     margin-top: $lineHeight + rem
     margin-bottom: $lineHeight + rem
@@ -99,6 +92,7 @@ blockquote
     margin: $lineHeight + rem 0
     border-left: 2px solid #ddd
     color: $mediumTypeColor
+    font-style: italic
 
 ul, ol
     margin: $lineHeight + rem 0
