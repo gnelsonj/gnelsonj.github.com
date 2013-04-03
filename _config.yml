@@ -2,7 +2,7 @@ auto : true
 permalink : /:title/
 exclude : ['sass', 'config.rb', 'README.md']
 
-title : Nelson Joyce | Digital Product Designer
+title : Nelson Joyce - Digital Product Designer
 description : Thoughts on digital product design by Nelson Joyce.
 url : http://gnelsonj.com
 author :
@@ -13,6 +13,7 @@ author :
   github : gnelsonj
   linkedIn : gnelsonj
   twitter : nelsonjoyce
+  twitterId : 216396668
   dribbble : nelsonjoyce
   googlePlus : 116388594856737469980
   feedBurner : nelsonjoyce
