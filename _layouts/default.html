@@ -7,12 +7,12 @@
 
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="{{ site.author.firstName }} {{ site.author.lastName }}">
-    <meta name="description" content="{% if page.description %}{{ page.description }} - {% endif %}{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}">
-    <meta name="twitter:description" content="{% if page.description %}{{ page.description }} - {% endif %}{{ site.description }}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="{% if page.image %}{{ page.image }}{% else %}http://www.gnelsonj.com/images/nelson-joyce.png{% endif %}">
     <meta name="twitter:creator" content="@{{ site.author.twitter }}">
     <meta name="twitter:creator:id" content="{{ site.author.twitterId }}">
