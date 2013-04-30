@@ -67,8 +67,9 @@ h1
     font-size: $h1Size
     line-height: $lineHeight*2 + rem
     
-    @media all and (max-width: 768px)
+    @media all and (max-width: 560px)
         font-size: $h1Size*0.8
+        line-height: $lineHeight + rem
 
 h2
     font-size: $h2Size
@@ -107,7 +108,7 @@ ul, ol
 
         li
             display: inline-block
-            padding: 0 $lineHeight/2 + rem
+            padding: 0 $lineHeight + rem 0 0
 
             &:first-child
                 padding-left: 0
@@ -164,6 +165,9 @@ a
     header
         margin: $lineHeight*2 + rem 0 $lineHeight + rem
 
+        @media all and (max-width: 560px)
+            margin-top: $lineHeight + rem
+
     a
         color: $typeColor
         border-bottom: 1px dotted $typeColor
@@ -172,11 +176,18 @@ a
             border-color: $linkColor
 
     ol, ul
-        @media all and (max-width: 1151px)
+        @media all and (max-width: 560px)
+            width: auto
             padding-left: 30px
+            margin:
+                left: 5%
+                right: 5%
 
             &.inline
                 padding: 0
+                li
+                    display: block
+                    padding: 0 
 
 
     #post
@@ -237,6 +248,7 @@ a
                 &:hover
                     
                     .post-title
+                        
                         &:after
                             margin-left: 5px
                             display: inline
