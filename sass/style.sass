@@ -133,7 +133,7 @@ a
             a
                 display: block
                 line-height: $lineHeight*2 + rem
-                padding: 0 $lineHeight*2 + rem
+                padding: 0 $lineHeight + rem
                 font-family: $sansSerif
                 color: rgba(0,0,0,0.4)
                 text-transform: uppercase
@@ -144,8 +144,8 @@ a
                 &:hover
                     color: rgba(0,0,0,0.8)
 
-                &:first-child
-                    margin-left: -$lineHeight*2 + rem
+                &.logo
+                    margin-left: -$lineHeight + rem
 
 #main 
     p, figure, pre, cite, blockquote, h1, h2, h3, h4, h5, h6, ul, ol, .skinny-container
