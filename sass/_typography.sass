@@ -1,0 +1,95 @@
+html
+    font-size: 100%
+    @media all and (min-width: 960px) and (min-height: 600px), all and (min-width: 1152px) and (min-height: 600px)
+        font-size: 125%
+
+body
+    font-family: $serif
+    font-size: $baseFontSize
+    color: $typeColor
+    line-height: $lineHeight + em
+
+a
+    color: $typeColor
+    border-bottom: 1px dotted $typeColor
+    text-decoration: none
+
+    &:hover
+        color: $linkColor
+        border-color: $linkColor
+
+h1, h2, h3, h4, h5, h6
+    font-family: $sansSerif
+    font-weight: 700
+    margin-top: $lineHeight + rem
+    margin-bottom: $lineHeight + rem
+
+h1
+    font-size: $h1Size
+    line-height: $lineHeight*2 + rem
+
+    @media all and (max-width: 560px)
+        font-size: $h1Size*0.8
+        line-height: $lineHeight + rem
+
+h2
+    font-size: $h2Size
+
+h3
+    font-size: $h3Size
+    text-transform: uppercase
+
+h4, h5, h6
+    font-size: $h4-6Size
+
+p
+    margin: 0
+
+p + p
+    margin-top: $lineHeight + em
+
+blockquote
+    margin: $lineHeight + rem 0
+    border-left: 2px solid #ddd
+    color: $mediumTypeColor
+    font-style: italic
+    a
+        color: $mediumTypeColor
+
+ul, ol
+    margin: $lineHeight + rem 0
+    padding: 0
+
+    li + li
+        padding-top: $lineHeight + em
+
+    &.no-bullets
+        list-style: none
+
+    &.inline
+        +pie-clearfix()
+
+        li
+            display: inline-block
+            padding: 0 $lineHeight + rem 0 0
+
+            &:first-child
+                padding-left: 0
+
+    @media all and (max-width: 560px)
+        width: auto
+        padding-left: 30px
+        margin:
+            left: 5%
+            right: 5%
+
+        &.inline
+            padding: 0
+            li
+                display: block
+                padding: 0
+
+.post-date
+    text-transform: uppercase
+    color: $lightTypeColor
+    font-family: $sansSerif

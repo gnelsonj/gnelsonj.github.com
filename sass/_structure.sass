@@ -1,0 +1,29 @@
+@mixin column($size: wide)
+    margin-left: auto
+    margin-right: auto
+    width: 90%
+
+    @if $size == skinny
+        max-width: $columnWidth
+    @else
+        max-width: $wideColumnWidth
+
+#main
+    header
+        margin: $lineHeight*2 + rem 0 $lineHeight + rem
+
+        @media all and (max-width: 560px)
+            margin-top: $lineHeight + rem
+
+    p, figure, pre, cite, blockquote, h1, h2, h3, h4, h5, h6, ul, ol, .skinny-container
+        @include column(skinny)
+
+    img
+        display: block
+        max-width: 100%
+        margin:
+            right: auto
+            left: auto
+
+    .wide-container
+        @include column(wide)

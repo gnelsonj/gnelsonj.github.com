@@ -1,0 +1,29 @@
+#blog-list
+    @include column(skinny)
+
+    .post
+
+        + .post
+            border-top: $border
+
+        a
+            +pie-clearfix()
+            display: block
+            padding: 0.5em 0
+            border: 0
+            &:hover
+
+                .post-title
+
+                    &:after
+                        margin-left: 5px
+                        display: inline
+                        content: '\2192'
+
+        .post-title
+            width: 80%
+            float: right
+
+        .post-date
+            width: 20%
+            float: left
