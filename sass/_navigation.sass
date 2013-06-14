@@ -18,9 +18,16 @@
                 color: #B51F1C
                 text-transform: uppercase
                 letter-spacing: 0.15em
+                border: 0
+
+                @media all and (max-width: 560px)
+                    padding: 0 10px
 
                 &:hover
                     color: #850F0C
 
                 &.logo
                     margin-left: -$lineHeight + rem
+
+                    @media all and (max-width: 560px)
+                        margin-left: -10px
