@@ -2,18 +2,55 @@
 layout: default
 ---
 
-<header>
-    <h1>Hi, I'm {{ site.author.firstName }}.</h1>
+<header class="row">
+    <h1 class="span4 offset1">Nelson Joyce</h1>
+    <h2 class="span4 offset1 no-pad">Product Designer</h2>
 </header>
-<h2>Here are my blog posts:</h2>
-<section id="blog-list">
-    {% for post in site.posts %}
-        <article class="post">
-            <a href="{{ post.url }}">
-                <span class="post-date">{{ post.date | date: "%b %d" }}</span>
-                <span class="post-title">{{ post.title }}</span>
-            </a>
-        </article>
-    {% endfor %}
+<section class="row">
+    <h3 class="span1">About</h3>
+    <p class="span4 no-pad">I'm a product designer from Boston, MA currently working at HubSpot. I'm passionate about building products people love by researching, testing, building, and iterating on inteface desings.<br>
+    <a href="/about.html">Read about how I work.</a>
+    </p>
 </section>
-<a href="/about.html"><h2>Read more about me.</h2></a>
+<section id="blog-list" class="row">
+    <h3 class="span1">Articles</h3>
+    <ul class="span4 unstyled">
+        {% for post in site.posts %}
+            <li class="post">
+                <p>
+                    <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+                    <br>
+                    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+<section class="row">
+    <h3 class="span1">Speaking</h3>
+    <ul class="span4 unstyled">
+        <li>
+            <p>
+                <a href="http://events.thebuildnetwork.com/" class="talk-title">
+                    Always Be Capturing
+                </a>
+                <br>
+                <span class="talk-date">June 19, 2013</span>
+            </p>
+        </li>
+    </ul>
+</section>
+<section class="row">
+    <h3 class="span1">On the Web</h3>
+    <ul class="span4 unstyled">
+        <li><a href="https://twitter.com/nelsonjoyce">Twitter</a></li>
+        <li><a href="http://dribbble.com/nelsonjoyce">Dribbble</a></li>
+        <li><a href="https://github.com/gnelsonj">GitHub</a></li>
+        <li><a href="https://plus.google.com/116388594856737469980?rel=author">Google+</a></li>
+        <li><a href="http://www.linkedin.com/in/gnelsonj">LinkedIn</a></li>
+    </ul>
+</section>
+<section class="row">
+    <h3 class="span1">Colophon</h3>
+    <p class="span4 no-pad">This site was built with Jekyll and SASS and is hosted on GitHub Pages. If you'd like to see the code for this site and use it or suggest improvements, check it out on <a href="https://github.com/gnelsonj/gnelsonj.github.com">GitHub</a>.</p>
+</section>
