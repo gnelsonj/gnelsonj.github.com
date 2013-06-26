@@ -2,27 +2,34 @@
 layout: default
 ---
 
-<header>
-    <h1>I'm a {{ site.author.jobTitle }} from {{site.author.location}}.</h1>
+<header class="row">
+    <h1 class="span4 offset1">I'm a {{ site.author.jobTitle }} from {{site.author.location}}.</h1>
 </header>
-<h2>This is my design process:</h2>
-<ol>
-    <li><strong>Understand the problem:</strong> Interview users or review user research to develop an understanding of the user's goals.</li>
-    <li><strong>Understand the current solutions:</strong> Examine how users are currently solving their problems. Are they currently using a different app to solve this problem? An excel spreadsheet? A pen and paper?</li>
-    <li><strong>Ideation and sketching:</strong> Diverge and explore possible solutions to the problem in the form of sketching. Keep the sketches simple to iterate through ideas quickly.
-    </li>
-    <li><strong>Prototyping:</strong> Review the sketches and pick the best ideas, or combination of the best ideas, and present them in a high enough fidelity to properly convey how the interface will function.
-    </li>
-    <li><strong>Testing:</strong> Present the prototype to as many users as possible. Gather feedback. Iterate based on that feedback.
-    </li>
-    <li><strong>Implementation:</strong> Find and engineer and build the damn thing.</li></ol>
-<h2>On the Web</h2>
-<ul class="inline">
-    <li><a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a></li>
-    <li><a href="http://dribbble.com/{{ site.author.dribbble }}">Dribbble</a></li>
-    <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
-    <li><a href="https://plus.google.com/{{ site.author.googlePlus }}?rel=author">Google+</a></li>
-    <li><a href="http://www.linkedin.com/in/{{ site.author.linkedIn }}">LinkedIn</a></li>
-</ul>
-<h2>Colophon</h2>
-<p>This site was built with Jekyll and SASS and is hosted on GitHub Pages. If you'd like to see the code for this site and use it or suggest improvements, check it out on <a href="https://github.com/gnelsonj/gnelsonj.github.com">GitHub</a>.</p>
+<section class="row">
+    <h3 class="span1">How I Work</h3>
+    <ol class="span4">
+        <li><strong>Understand the problem:</strong> Interview users or review user research to develop an understanding of the user's goals.</li>
+        <li><strong>Understand the current solutions:</strong> Examine how users are currently solving their problems. Are they currently using a different app to solve this problem? An excel spreadsheet? A pen and paper?</li>
+        <li><strong>Ideation and sketching:</strong> diverge and explore possible solutions to the problem in the form of sketching. Keep the sketches simple to iterate through ideas quickly.
+        </li>
+        <li><strong>Prototyping:</strong> Review the sketches and pick the best ideas, or combination of the best ideas, and present them in a high enough fidelity to properly convey how the interface will function.
+        </li>
+        <li><strong>Testing:</strong> Present the prototype to as many users as possible. Gather feedback. Iterate based on that feedback.
+        </li>
+        <li><strong>Implementation:</strong> Find and engineer and build the damn thing.</li>
+    </ol>
+</section>
+<section class="row">
+    <h3 class="span1">On the Web</h3>
+    <ul class="inline span4">
+        <li><a href="https://twitter.com/{{ site.author.twitter }}">Twitter</a></li>
+        <li><a href="http://dribbble.com/{{ site.author.dribbble }}">Dribbble</a></li>
+        <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+        <li><a href="https://plus.google.com/{{ site.author.googlePlus }}?rel=author">Google+</a></li>
+        <li><a href="http://www.linkedin.com/in/{{ site.author.linkedIn }}">LinkedIn</a></li>
+    </ul>
+</section>
+<section class="row">
+    <h3 class="span1">Colophon</h3>
+    <p class="span4 no-pad">This site was built with Jekyll and SASS and is hosted on GitHub Pages. If you'd like to see the code for this site and use it or suggest improvements, check it out on <a href="https://github.com/gnelsonj/gnelsonj.github.com">GitHub</a>.</p>
+</section>

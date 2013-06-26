@@ -5,37 +5,166 @@
 @import "compass/css3"
 
 // Type
-$baseFontSize:      1rem
-$lineHeight:        1.9
-$serif:             'PT Serif', georgia, 'Times New Roman', 'Times', serif
-$sansSerif:         'PT Sans Narrow', helvetica, arial, sans-serif
-$h1Size:            2rem
-$h2Size:            1.5rem
-$h3Size:            1rem
-$h4-6Size:          1rem
-
+$typeface:          'proxima-nova', helvetica, arial, sans-serif
 
 // colors
-$backgroundColor:   #fff
-$borderColor:       #ddd
 $typeColor:         #444
 $mediumTypeColor:   lighten($typeColor, 20%)
 $lightTypeColor:    lighten($typeColor, 40%)
 $linkColor:         #3288E6
 
-// layout
-$columnWidth:       35rem
-$wideColumnWidth:   $columnWidth*1.45
-$border:            1px dotted #ccc
+//mixins
+@function lines($numRems)
+    @return $numRems + rem
 
 // Style Imports
-@import "typography.sass"
-@import "structure.sass"
-@import "navigation.sass"
-@import "footer.sass"
-@import "blog.sass"
-@import "post.sass"
+
+html
+    font-size: 250%
+    border-top: 5px solid #E54F4C
+
+    @media all and (max-width: 700px)
+        font-size: 200%
+
 
 body
-    margin: 0
+    font-family: $typeface
+    font-size: 0.5rem
+    color: $typeColor
+    line-height: lines(1)
     background-color: $backgroundColor
+    margin-top: lines(3)
+
+    @media all and (max-width: 700px)
+        margin-top: lines(2)
+
+h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
+    margin: 0
+    line-height: lines(1)
+
+h1, h3, h4, h5, h6
+    font-weight: 800
+    text-transform: uppercase
+
+h1
+    font-size: 2.5em
+    line-height: 1em
+    letter-spacing: 0.075em
+    margin: 0
+
+    @media all and (max-width: 700px)
+        font-size: 1.5em
+        line-height: 1em
+
+h2
+    font-size: 1.5em
+    font-weight: 400
+
+h3, h4, h5, h6
+    font-size: .75em
+
+p, li, blockquote, pre, h2, h3, img
+    margin-top: lines(1)
+
+    &:first-child
+        margin-top: 0
+
+a
+    color: $typeColor
+    border-bottom: 1px dotted $typeColor
+    text-decoration: none
+
+    &:hover
+        color: $linkColor
+        border-color: $linkColor
+
+ul, ol
+    margin: 0
+    padding: 0
+
+    &.unstyled
+        list-style: none
+
+    &.inline
+        li
+            padding: 0 2em 0 0
+            display: inline
+
+.no-pad
+    margin: 0
+    padding: 0
+
+header, section
+    margin-bottom: lines(3)
+
+    @media all and (max-width: 700px)
+        margin-bottom: lines(1)
+
+img
+    max-width: 100%
+
+.post-date, .talk-date
+    font-size: 0.75em
+    color: $lightTypeColor
+
+#post
+    .post-date
+        color: $typeColor
+
+#footer
+    font-size: 0.75em
+    margin:
+        top: lines(4)
+        bottom: lines(1)
+    color: #999
+
+    a
+        border: 0
+        color: #999
+
+.row
+    +pie-clearfix()
+    max-width: 1100px
+    margin:
+        left: auto
+        right: auto
+
+    =spanBase
+        display: block
+        float: left
+        +box-sizing(border-box)
+        padding: 0 lines(0.5)
+        @media all and (max-width: 700px)
+            width: 100%
+
+    =offsetBase
+        @media all and (max-width: 700px)
+            margin-left: 0
+
+    .span1
+        +spanBase
+        width: 16.6666667%
+
+    .span2
+        +spanBase
+        width: 33.3333334%
+
+    .span3
+        +spanBase
+        width: 50.0000001%
+
+    .span4
+        +spanBase
+        width: 66.6666668%
+
+    .span5
+        +spanBase
+        width: 83.3333335%
+
+    .span6
+        +spanBase
+        width: 100%
+
+    .offset1
+        +offsetBase
+        margin-left: 16.6666667%
