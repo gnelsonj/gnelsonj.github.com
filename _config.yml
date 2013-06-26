@@ -2,13 +2,13 @@ auto : true
 permalink : /:title/
 exclude : ['sass', 'config.rb', 'README.md']
 
-title : Nelson Joyce - Digital Product Designer
-description : Thoughts on digital product design by Nelson Joyce.
+title : Nelson Joyce - Product Designer
+description : Thoughts on product design by Nelson Joyce.
 url : http://gnelsonj.com
 author :
   firstName : Nelson
   lastName : Joyce
-  jobTitle : Digital Product Designer
+  jobTitle : Product Designer
   email : nellyvan@gmail.com
   github : gnelsonj
   linkedIn : gnelsonj
