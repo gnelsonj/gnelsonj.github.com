@@ -31,10 +31,7 @@ body
     font-size: 0.5rem
     color: $typeColor
     line-height: lines(1)
-    margin-top: lines(3)
-
-    @media all and (max-width: 700px)
-        margin-top: lines(2)
+    margin: 0
 
 h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
     margin: 0
@@ -91,6 +88,21 @@ ul, ol
 .no-pad
     margin: 0
     padding: 0
+
+nav
+    margin-top: lines(1)
+    a
+        text-transform: uppercase
+        font-size: 0.75em
+        color: $lightTypeColor
+        border: 0
+
+header
+    margin-top: lines(3)
+
+    @media all and (max-width: 700px)
+        margin-top: lines(2)
+
 
 header, section
     margin-bottom: lines(3)
