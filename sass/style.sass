@@ -31,10 +31,11 @@ body
     font-size: 0.5rem
     color: $typeColor
     line-height: lines(1)
-    margin-top: lines(3)
+    margin: lines(3) 0 0
 
     @media all and (max-width: 700px)
-        margin-top: lines(2)
+        margin: lines(2) 5% 0
+
 
 h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
     margin: 0
@@ -42,11 +43,10 @@ h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
 
 h1, h3, h4, h5, h6
     font-weight: 800
-    text-transform: uppercase
 
 h1
     font-size: 2.5em
-    line-height: 1em
+    line-height: lines(1)
     margin: 0
 
     @media all and (max-width: 700px)
@@ -94,13 +94,18 @@ blockquote
     border-left: 4px solid #CCC
 
 header, section
-    margin-bottom: lines(3)
+    margin-bottom: lines(2)
 
     @media all and (max-width: 700px)
         margin-bottom: lines(1)
 
 img
     max-width: 100%
+    max-height: lines(15)
+    margin:
+        left: auto
+        right: auto
+    display: block
 
 .no-pad
     margin: 0
@@ -139,6 +144,7 @@ img
         padding: 0 lines(0.5)
         @media all and (max-width: 700px)
             width: 100%
+            padding: 0
 
     =offsetBase
         @media all and (max-width: 700px)
