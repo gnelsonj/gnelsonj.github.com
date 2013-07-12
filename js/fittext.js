@@ -22,8 +22,8 @@
     window.fitText = function(el, kompressor) {
 
         var settings = {
-            'minFontSize': 20,
-            'maxFontSize': 100
+            'minFontSize': 34,
+            'maxFontSize': 50
         };
 
         var fit = function(el) {
