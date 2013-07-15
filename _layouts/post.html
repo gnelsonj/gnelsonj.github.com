@@ -7,14 +7,16 @@ layout: default
         <h1 id="fittext" class="span4 offset1 post-title">{{page.title}}</h1>
     </header>
     <div class="row">
-        <h3 class="span1 post-date">{{ page.date | date: "%b %d, %Y" }}</h3>
+        <div class="span1">
+            <h3 class="post-date">{{ page.date | date: "%b %d, %Y" }}</h3>
+        </div>
         <div class="span4">
             {{ content }}
-            <h3>About Nelson</h3>
-            <p>
+            <p class="about">
+                <strong>About Nelson</strong>
+                <br>
                 I'm a product designer from Boston, MA currently working at <a href="http://www.hubspot.com">HubSpot</a>. I'm passionate about building products people love by researching, testing, building, and iterating on inteface desings.
-            </p>
-            <p>
+                <br>
                 <a href="https://twitter.com/nelsonjoyce" class="twitter-follow-button" data-show-count="false">You should follow me on Twitter.</a>
                 <br>
                 <a href="/">More about me.</a>
