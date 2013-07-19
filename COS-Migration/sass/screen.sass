@@ -16,7 +16,7 @@ h2
 	text-align: center
 
 h1
-	font-size: 2rem
+	font-size: 1.75rem
 	font-weight: 800
 	line-height: 2rem
 	margin: 1rem 0
@@ -42,7 +42,7 @@ p
 	margin: 0
 
 ul
-	margin: 0.5rem 0 0.5rem 1rem
+	margin: 0.5rem 0 0 1rem
 
 	li + li
 		margin: 0.5rem 0 0
@@ -102,23 +102,41 @@ ul
 		display: inline-block
 		margin-top: 0.5rem
 
-.icon
-	height: 140px
-	background-image: url('../app-icons.png')
-	background-repeat: no-repeat
-
-	&.landing-pages-icon
+.comparison-link
+	margin-top: 0.5rem
+	display: inline-block
 
 #header
 	padding: 2rem 0
 	background-color: #E68A4C
 	color: white
+	text-align: center
+
+	&.with-tabs
+		padding-bottom: 0
 
 	h2
-		text-align: left
 		color: #FFE1CC
 		margin: 0
 		line-height: 1.5rem
+	.tabs
+		margin-top: 1.5rem
+
+		.tab
+			width: 100%
+			background-color: #eee
+			display: block
+			padding: 0.5rem 0
+			border-bottom: 4px solid #eee
+			border-radius: 5px 5px 0 0
+
+			&.selected
+				background-color: #fff
+
+			&.selected, &:hover, &:active
+				border:
+					top: 4px solid #96BFD3
+					bottom: 0
 
 //HAX
 .row-fluid .offset1:first-child
@@ -130,7 +148,7 @@ ul
 .row-fluid .offset3:first-child
 	margin-left: 25.64103%
 
-@media all and (max-height: 800px), (max-width: 800px)
+@media all and (max-height: 800px), (max-width: 767px)
 
 	html
 		font-size: 24px
@@ -138,6 +156,8 @@ ul
 	body
 		font-size: 0.65rem
 
+
+@media all and (max-width: 767px)
 	.row-fluid [class*="offset"]:first-child
 		margin-left: 0
 

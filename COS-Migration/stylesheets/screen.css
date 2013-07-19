@@ -25,7 +25,7 @@ h2 {
 
 /* line 18, ../sass/screen.sass */
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   line-height: 2rem;
   margin: 1rem 0;
@@ -59,7 +59,7 @@ p {
 
 /* line 44, ../sass/screen.sass */
 ul {
-  margin: 0.5rem 0 0.5rem 1rem;
+  margin: 0.5rem 0 0 1rem;
 }
 /* line 47, ../sass/screen.sass */
 ul li + li {
@@ -140,58 +140,84 @@ ul li + li {
 }
 
 /* line 105, ../sass/screen.sass */
-.icon {
-  height: 140px;
-  background-image: url("../app-icons.png");
-  background-repeat: no-repeat;
+.comparison-link {
+  margin-top: 0.5rem;
+  display: inline-block;
 }
 
-/* line 112, ../sass/screen.sass */
+/* line 109, ../sass/screen.sass */
 #header {
   padding: 2rem 0;
   background-color: #e68a4c;
   color: white;
+  text-align: center;
 }
-/* line 117, ../sass/screen.sass */
+/* line 115, ../sass/screen.sass */
+#header.with-tabs {
+  padding-bottom: 0;
+}
+/* line 118, ../sass/screen.sass */
 #header h2 {
-  text-align: left;
   color: #ffe1cc;
   margin: 0;
   line-height: 1.5rem;
 }
+/* line 122, ../sass/screen.sass */
+#header .tabs {
+  margin-top: 1.5rem;
+}
+/* line 125, ../sass/screen.sass */
+#header .tabs .tab {
+  width: 100%;
+  background-color: #eeeeee;
+  display: block;
+  padding: 0.5rem 0;
+  border-bottom: 4px solid #eeeeee;
+  border-radius: 5px 5px 0 0;
+}
+/* line 133, ../sass/screen.sass */
+#header .tabs .tab.selected {
+  background-color: white;
+}
+/* line 136, ../sass/screen.sass */
+#header .tabs .tab.selected, #header .tabs .tab:hover, #header .tabs .tab:active {
+  border-top: 4px solid #96bfd3;
+  border-bottom: 0;
+}
 
-/* line 124, ../sass/screen.sass */
+/* line 142, ../sass/screen.sass */
 .row-fluid .offset1:first-child {
   margin-left: 8.54701%;
 }
 
-/* line 127, ../sass/screen.sass */
+/* line 145, ../sass/screen.sass */
 .row-fluid .offset2:first-child {
   margin-left: 17.09402%;
 }
 
-/* line 130, ../sass/screen.sass */
+/* line 148, ../sass/screen.sass */
 .row-fluid .offset3:first-child {
   margin-left: 25.64103%;
 }
 
-@media all and (max-height: 800px), (max-width: 800px) {
-  /* line 135, ../sass/screen.sass */
+@media all and (max-height: 800px), (max-width: 767px) {
+  /* line 153, ../sass/screen.sass */
   html {
     font-size: 24px;
   }
 
-  /* line 138, ../sass/screen.sass */
+  /* line 156, ../sass/screen.sass */
   body {
     font-size: 0.65rem;
   }
-
-  /* line 141, ../sass/screen.sass */
+}
+@media all and (max-width: 767px) {
+  /* line 161, ../sass/screen.sass */
   .row-fluid [class*="offset"]:first-child {
     margin-left: 0;
   }
 
-  /* line 144, ../sass/screen.sass */
+  /* line 164, ../sass/screen.sass */
   .icon {
     text-align: center;
     display: block;
