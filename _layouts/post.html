@@ -11,7 +11,7 @@ layout: default
         <div class="span4">
             {{ content }}
             <p>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi" target="_blank">Tweet This</a>
+                <a href="https://twitter.com/share?text=%22{{ page.title | UrlEncode }}%22%20-%20{{ site.url | UrlEncode }}{{ page.url | UrlEncode }}" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi" target="_blank">Tweet This</a>
             </p>
             <p class="about">
                 <strong>About Nelson</strong>
