@@ -4,7 +4,7 @@ layout: default
 
 <article id="post">
     <header class="row">
-        <h1 id="fittext" class="span4 offset1 post-title">{{page.title}}</h1>
+        <h1 class="span4 offset1 post-title">{{page.title}}</h1>
     </header>
     <div class="row">
         <h3 class="span1 post-date">{{ page.date | date: "%b %d, %Y" }}</h3>
@@ -25,7 +25,3 @@ layout: default
         </div>
     </div>
 </article>
-<script type="text/javascript" src="/js/fittext.js"></script>
-<script type="text/javascript">
-    fitText(document.getElementById('fittext'), {{ page.compressor }})
-</script>

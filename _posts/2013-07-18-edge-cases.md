@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Dealing with Edge Cases in Product Design
-compressor: 2.15
 ---
 
 <img src="/images/edge-cases-hero.png">
