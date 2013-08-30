@@ -5,7 +5,10 @@
 @import "compass/css3"
 
 // Type
-$typeface:          'freight-sans-pro', helvetica, arial, sans-serif
+$typeface:          'freight-text-pro', georgia, times, serif
+$headerTypeface:    'freight-sans-pro', helvetica, arial, sans-serif
+
+
 
 // colors
 $typeColor:         #444
@@ -41,8 +44,14 @@ h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
     margin: 0
     line-height: lines(1)
 
-h1, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6
+    font-family: $headerTypeface
+
+h1, h4, h5, h6
     font-weight: 800
+
+h2, h3
+    font-weight: 400
 
 h1
     font-size: 2.5em
@@ -55,7 +64,6 @@ h1
 
 h2
     font-size: 1.5em
-    font-weight: 400
 
 h3
     font-size: 0.8em
