@@ -37,7 +37,7 @@ body
     margin: lines(2) 0 0
 
     @media all and (max-width: 700px)
-        margin: lines(2) 5% 0
+        margin: lines(1) 5% 0
 
 
 h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
@@ -62,12 +62,18 @@ h1
 h2
     font-size: 1.5em
     font-weight: 400
-
+    
+    @media all and (max-width: 700px)
+        font-size: 1em
+        line-height: 1em
 h3
     font-size: 0.8em
     text-transform: uppercase
     letter-spacing: 0.1em
     text-align: right
+
+    @media all and (max-width: 700px)
+        text-align: left
 
 h4, h5, h6
     font-size: 1em
@@ -119,6 +125,13 @@ img
         right: auto
     display: block
 
+.breadcrumb
+    color: $lightTypeColor
+    text-align: right
+    border: 0
+
+    @media all and (max-width: 700px)
+        text-align: left
 .no-pad
     margin: 0
     padding: 0
