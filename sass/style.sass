@@ -78,7 +78,13 @@ h3
 h4, h5, h6
     font-size: 1em
 
-p, li, blockquote, pre, h2, h3, img, #disqus_thread
+li
+    margin-top: lines(0.5)
+
+    &:first-child
+        margin-top: 0
+        
+p, blockquote, pre, h2, h3, img, #disqus_thread
     margin-top: lines(1)
 
     &:first-child
