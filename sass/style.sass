@@ -39,6 +39,7 @@ body
     margin:
         left: 0
         right: 0
+        bottom: 0
     +remFallback("font-size", 0.6)
     +remFallback("line-height", 1)
 
@@ -60,15 +61,11 @@ h1, h2, h3, h4, h5, h6
 h1
     font-size: 3em
     +remFallback("line-height", 2)
-    margin: 0
 
 h2
     font-size: 2em
     font-weight: 400
     
-    @media all and (max-width: 700px)
-        font-size: 1em
-        line-height: 1em
 h3
     font-size: 1em
     text-transform: uppercase
