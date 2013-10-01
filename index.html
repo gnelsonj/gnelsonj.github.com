@@ -4,7 +4,6 @@ layout: default
 
 <header class="row">
     <h1 class="span4 offset1">Nelson Joyce</h1>
-    <h2 class="span4 offset1 no-pad">Product Designer</h2>
 </header>
 <section class="row">
     <h3 class="span1">About</h3>
@@ -18,8 +17,6 @@ layout: default
             <li class="post">
                 <p>
                     <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-                    <br>
-                    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
                 </p>
             </li>
         {% endfor %}
@@ -33,8 +30,6 @@ layout: default
                 <a href="http://events.thebuildnetwork.com/" class="talk-title">
                     Always Be Capturing
                 </a>
-                <br>
-                <span class="talk-date">June 19, 2013</span>
             </p>
         </li>
     </ul>

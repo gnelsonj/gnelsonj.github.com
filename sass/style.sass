@@ -4,45 +4,52 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/css3"
 
+// Layout
+
 // Type
-$typeface:          'freight-text-pro', georgia, times, serif
-$headerTypeface:    'freight-sans-pro', helvetica, arial, sans-serif
-
-
+$typeface:          'ff-tisa-web-pro', georgia, times, serif
+$headerTypeface:    'ff-good-headline-web-pro-con', helvetica, arial, sans-serif
+$baseMultiplier:    2
+$line-height:       16px * $baseMultiplier
 
 // colors
 $typeColor:         #444
 $mediumTypeColor:   lighten($typeColor, 20%)
 $lightTypeColor:    lighten($typeColor, 40%)
 $linkColor:         #3288E6
+$accentColor:       #E54F4C
 
 //mixins
-@function lines($numRems)
-    @return $numRems + rem
+@mixin remFallback($property, $rem)
+    #{$property}: $rem * $line-height
+    #{$property}: $rem + rem
 
 // Style Imports
 
 html
-    font-size: 250%
-    border-top: 5px solid #E54F4C
+    font-size: 100% * $baseMultiplier
+    border-top: 5px solid $accentColor
 
     @media all and (max-width: 700px)
-        font-size: 200%
+        font-size: 100% * $baseMultiplier * 0.825
 
 body
     font-family: $typeface
-    font-size: 0.5rem
     color: $typeColor
-    line-height: lines(1)
-    margin: lines(2) 0 0
+    margin:
+        left: 0
+        right: 0
+    +remFallback("font-size", 0.6)
+    +remFallback("line-height", 1)
 
     @media all and (max-width: 700px)
-        margin: lines(1) 5% 0
-
+        margin:
+            left: 5%
+            right: 5%
 
 h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
     margin: 0
-    line-height: lines(1)
+    +remFallback("line-height", 1)
 
 h1, h2, h3, h4, h5, h6
     font-family: $headerTypeface
@@ -51,41 +58,39 @@ h1, h2, h3, h4, h5, h6
     font-weight: 800
 
 h1
-    font-size: 2em
-    line-height: lines(1)
+    font-size: 3em
+    +remFallback("line-height", 2)
     margin: 0
 
-    @media all and (max-width: 700px)
-        font-size: 1.5em
-        line-height: 1em
-
 h2
-    font-size: 1.5em
+    font-size: 2em
     font-weight: 400
     
     @media all and (max-width: 700px)
         font-size: 1em
         line-height: 1em
 h3
-    font-size: 0.8em
+    font-size: 1em
     text-transform: uppercase
     letter-spacing: 0.1em
-    text-align: right
+    
+    &.span1
+        text-align: right
 
-    @media all and (max-width: 700px)
-        text-align: left
+        @media all and (max-width: 700px)
+            text-align: left
 
 h4, h5, h6
     font-size: 1em
 
 li
-    margin-top: lines(0.5)
+    +remFallback("margin-top", 0.5)
 
     &:first-child
         margin-top: 0
         
 p, blockquote, pre, h2, h3, img, #disqus_thread
-    margin-top: lines(1)
+    +remFallback("margin-top", 1)
 
     &:first-child
         margin-top: 0
@@ -117,24 +122,29 @@ blockquote
     padding-left: 1em
     border-left: 4px solid #CCC
 
-header, section
-    margin-bottom: lines(1)
+header
+    +remFallback("margin-bottom", 1)
+
+section
+    +remFallback("margin-top", 2)
 
     @media all and (max-width: 700px)
-        margin-bottom: lines(1)
+        +remFallback("margin-top", 1)
 
 img
     max-width: 100%
-    max-height: lines(15)
     margin:
         left: auto
         right: auto
     display: block
+    +remFallback("max-height", 15)
 
 .breadcrumb
     color: $lightTypeColor
     text-align: right
     border: 0
+    +remFallback("line-height", 2)
+
 
     @media all and (max-width: 700px)
         text-align: left
@@ -151,15 +161,15 @@ img
         color: $typeColor
 
 .about
-    padding-top: lines(1)
     border-top: 1px dotted #ddd
+    +remFallback("padding-top", 1)
+    +remFallback("margin-top", 1)
 
 #footer
     font-size: 0.75em
-    margin:
-        top: lines(4)
-        bottom: lines(1)
     color: #999
+    +remFallback("margin-top", 4)
+    +remFallback("margin-bottom", 1)
 
     a
         border: 0
@@ -167,48 +177,50 @@ img
 
 .row
     +pie-clearfix()
-    max-width: 1100px
+    max-width: 1000px
     margin:
         left: auto
         right: auto
 
-    =spanBase
+    .span1
+        @extend .spanBase
+        width: 16.6666667%
+
+    .span2
+        @extend .spanBase
+        width: 33.3333334%
+
+    .span3
+        @extend .spanBase
+        width: 50.0000001%
+
+    .span4
+        @extend .spanBase
+        width: 66.6666668%
+
+    .span5
+        @extend .spanBase
+        width: 83.3333335%
+
+    .span6
+        @extend .spanBase
+        width: 100%
+    
+    .spanBase
         display: block
         float: left
+        +remFallback("padding-left", 0.5)
+        +remFallback("padding-right", 0.5)
         +box-sizing(border-box)
-        padding: 0 lines(0.5)
+
         @media all and (max-width: 700px)
             width: 100%
             padding: 0
 
-    =offsetBase
+    .offset1
+        @extend .offsetBase
+        margin-left: 16.6666667%
+
+    .offsetBase
         @media all and (max-width: 700px)
             margin-left: 0
-
-    .span1
-        +spanBase
-        width: 16.6666667%
-
-    .span2
-        +spanBase
-        width: 33.3333334%
-
-    .span3
-        +spanBase
-        width: 50.0000001%
-
-    .span4
-        +spanBase
-        width: 66.6666668%
-
-    .span5
-        +spanBase
-        width: 83.3333335%
-
-    .span6
-        +spanBase
-        width: 100%
-
-    .offset1
-        +offsetBase
-        margin-left: 16.6666667%
