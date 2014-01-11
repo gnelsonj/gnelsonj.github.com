@@ -1,15 +1,17 @@
 ---
 layout: default
 ---
-
+<header class="row">
+    <div class="span4 offset1">
+        <a href="/"><h2 class="logo">Nelson Joyce — Product Designer</h2></a>
+    </div>
+</header>
 <article id="post">
     <header class="row">
-        <a href="/" class="breadcrumb span1">&larr; Home</a>
-        <h1 class="span4 post-title">{{page.title}}</h1>
+        <h1 class="span4 offset1 post-title">{{page.title}}</h1>
     </header>
     <div class="row">
-        <h3 class="span1 post-date">{{ page.date | date: "%b %d, %Y" }}</h3>
-        <div class="span4">
+        <div class="span4 offset1">
             {{ content }}
             <p>
                 <a href="https://twitter.com/share?text=%22{{ page.title | UrlEncode }}%22%20-%20" class="twitter-share-button" data-dnt="true" data-count="none" data-via="twitterapi" target="_blank">Tweet This</a>

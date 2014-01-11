@@ -7,8 +7,8 @@
 // Layout
 
 // Type
-$typeface:          'ff-tisa-web-pro', georgia, times, serif
-$headerTypeface:    'ff-good-headline-web-pro-con', helvetica, arial, sans-serif
+$typeface:          'ff-more-web-pro', 'ff-tisa-web-pro', georgia, times, serif
+$headerTypeface:    'ff-more-web-pro', 'ff-good-headline-web-pro-con', helvetica, arial, sans-serif
 $baseMultiplier:    2
 $line-height:       16px * $baseMultiplier
 
@@ -30,20 +30,17 @@ html
     font-size: 100% * $baseMultiplier
     border-top: 5px solid $accentColor
 
-    @media all and (max-width: 700px)
+    @media all and (max-width: 35em)
         font-size: 100% * $baseMultiplier * 0.825
 
 body
     font-family: $typeface
     color: $typeColor
-    margin:
-        left: 0
-        right: 0
-        bottom: 0
+    margin: 0
     +remFallback("font-size", 0.6)
     +remFallback("line-height", 1)
 
-    @media all and (max-width: 700px)
+    @media all and (max-width: 35em)
         margin:
             left: 5%
             right: 5%
@@ -54,27 +51,26 @@ h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
 
 h1, h2, h3, h4, h5, h6
     font-family: $headerTypeface
-
-h1, h3, h4, h5, h6
-    font-weight: 800
+    font-weight: 400
 
 h1
     font-size: 3em
     +remFallback("line-height", 2)
 
+    @media all and (max-width: 35em)
+
 h2
     font-size: 2em
-    font-weight: 400
     
 h3
-    font-size: 1em
+    font-size: 0.8em
     text-transform: uppercase
     letter-spacing: 0.1em
     
     &.span1
         text-align: right
 
-        @media all and (max-width: 700px)
+        @media all and (max-width: 35em)
             text-align: left
 
 h4, h5, h6
@@ -120,12 +116,18 @@ blockquote
     border-left: 4px solid #CCC
 
 header
-    +remFallback("margin-bottom", 1)
+    +remFallback("margin-bottom", 2)
+
+.logo
+    text-align: center
+    font-style: italic
+    color: lighten($accentColor, 20%)
+    +remFallback("font-size", 0.6)
 
 section
     +remFallback("margin-top", 2)
 
-    @media all and (max-width: 700px)
+    @media all and (max-width: 35em)
         +remFallback("margin-top", 1)
 
 img
@@ -140,10 +142,11 @@ img
     color: $lightTypeColor
     text-align: right
     border: 0
+    display: block
     +remFallback("line-height", 2)
 
 
-    @media all and (max-width: 700px)
+    @media all and (max-width: 35em)
         text-align: left
 .no-pad
     margin: 0
@@ -155,7 +158,11 @@ img
 
 #post
     .post-date
+        text-align: right
         color: $typeColor
+
+    h1, h2, h3, h4, h5, h6
+        text-align: center
 
 .about
     border-top: 1px dotted #ddd
@@ -174,7 +181,7 @@ img
 
 .row
     +pie-clearfix()
-    max-width: 1000px
+    max-width: 55em
     margin:
         left: auto
         right: auto
@@ -210,7 +217,7 @@ img
         +remFallback("padding-right", 0.5)
         +box-sizing(border-box)
 
-        @media all and (max-width: 700px)
+        @media all and (max-width: 35em)
             width: 100%
             padding: 0
 
@@ -219,5 +226,5 @@ img
         margin-left: 16.6666667%
 
     .offsetBase
-        @media all and (max-width: 700px)
+        @media all and (max-width: 35em)
             margin-left: 0
