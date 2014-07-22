@@ -52,12 +52,11 @@ h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
 h1, h2, h3, h4, h5, h6
     font-family: $headerTypeface
     font-weight: 400
+    font-style: italic
 
 h1
     font-size: 3em
     +remFallback("line-height", 2)
-
-    @media all and (max-width: 35em)
 
 h2
     font-size: 2em
@@ -119,7 +118,6 @@ header
     +remFallback("margin-bottom", 2)
 
 .logo
-    text-align: center
     font-style: italic
     color: lighten($accentColor, 20%)
     +remFallback("font-size", 0.6)
@@ -161,13 +159,10 @@ img
         text-align: right
         color: $typeColor
 
-    h1, h2, h3, h4, h5, h6
-        text-align: center
-
 .about
     border-top: 1px dotted #ddd
-    +remFallback("padding-top", 1)
-    +remFallback("margin-top", 1)
+    +remFallback("padding-top", 2)
+    +remFallback("margin-top", 2)
 
 #footer
     font-size: 0.75em
@@ -228,3 +223,12 @@ img
     .offsetBase
         @media all and (max-width: 35em)
             margin-left: 0
+
+.italic
+    font-style: italic
+
+.align-right
+    text-align: right
+
+.align-left
+    text-align: left

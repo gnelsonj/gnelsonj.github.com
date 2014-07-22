@@ -1,3 +1,4 @@
+markdown: kramdown
 auto : true
 permalink : /:title/
 exclude : ['sass', 'config.rb', 'README.md']
