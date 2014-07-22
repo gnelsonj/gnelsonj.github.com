@@ -4,25 +4,9 @@
 @import "compass/utilities/general/clearfix"
 @import "compass/css3"
 
-// Layout
-
-// Type
-$typeface:          'ff-more-web-pro', 'ff-tisa-web-pro', georgia, times, serif
-$headerTypeface:    'ff-more-web-pro', 'ff-good-headline-web-pro-con', helvetica, arial, sans-serif
-$baseMultiplier:    2
-$line-height:       16px * $baseMultiplier
-
-// colors
-$typeColor:         #444
-$mediumTypeColor:   lighten($typeColor, 20%)
-$lightTypeColor:    lighten($typeColor, 40%)
-$linkColor:         #3288E6
-$accentColor:       #E54F4C
-
-//mixins
-@mixin remFallback($property, $rem)
-    #{$property}: $rem * $line-height
-    #{$property}: $rem + rem
+// Includes
+@import "variables"
+@import "mixins"
 
 // Style Imports
 
@@ -53,6 +37,7 @@ h1, h2, h3, h4, h5, h6
     font-family: $headerTypeface
     font-weight: 400
     font-style: italic
+    color: #555
 
 h1
     font-size: 3em
@@ -110,9 +95,10 @@ ul, ol
 
 blockquote
     font-style: italic
-    color: #666
-    padding-left: 1em
+    padding-left: 2em
+    padding-right: 2em
     border-left: 4px solid #CCC
+    color: #555
 
 header
     +remFallback("margin-bottom", 2)
@@ -165,13 +151,13 @@ img
     +remFallback("margin-top", 2)
 
 #footer
-    font-size: 0.75em
     color: #999
+    border-top: 1px dotted #ddd
+    +remFallback("padding-top", 2)
     +remFallback("margin-top", 4)
-    +remFallback("margin-bottom", 1)
+    +remFallback("margin-bottom", 2)
 
     a
-        border: 0
         color: #999
 
 .row
