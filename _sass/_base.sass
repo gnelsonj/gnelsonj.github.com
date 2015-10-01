@@ -1,9 +1,5 @@
 // gnelsonj.com
 
-// Compass Imports
-@import "compass/utilities/general/clearfix"
-@import "compass/css3"
-
 // Includes
 @import "variables"
 @import "mixins"
@@ -36,7 +32,6 @@ h1, h2, h3, h4, h5, h6, p, li, blockquote, pre
 h1, h2, h3, h4, h5, h6
     font-family: $headerTypeface
     font-weight: 400
-    font-style: italic
     color: #555
 
 h1
@@ -45,12 +40,12 @@ h1
 
 h2
     font-size: 2em
-    
+
 h3
     font-size: 0.8em
     text-transform: uppercase
     letter-spacing: 0.1em
-    
+
     &.span1
         text-align: right
 
@@ -65,7 +60,7 @@ li
 
     &:first-child
         margin-top: 0
-        
+
 p, blockquote, pre, h2, h3, img, #disqus_thread
     +remFallback("margin-top", 1)
 
@@ -104,7 +99,6 @@ header
     +remFallback("margin-bottom", 2)
 
 .logo
-    font-style: italic
     color: lighten($accentColor, 20%)
     +remFallback("font-size", 0.6)
 
@@ -161,7 +155,7 @@ img
         color: #999
 
 .row
-    +pie-clearfix()
+    @include clearfix
     max-width: 55em
     margin:
         left: auto
@@ -190,7 +184,7 @@ img
     .span6
         @extend .spanBase
         width: 100%
-    
+
     .spanBase
         display: block
         float: left
@@ -218,3 +212,11 @@ img
 
 .align-left
     text-align: left
+
+.homepage-subheader
+    font-weight: 600
+    @extend .align-right
+
+    @media all and (max-width: 35em)
+        +remFallback("margin-bottom", 1)
+        text-align: left
