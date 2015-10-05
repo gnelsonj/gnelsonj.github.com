@@ -30,22 +30,20 @@ It’s also a place that [breeds great entrepreneurs][7]. [Dharmesh Shah][8] (Fo
 Andy and I are really excited about our next idea. We’re not ready to talk about it publicly yet (it’s only day 1), but if you’re interested in following along with our journey, you can sign up below.
 
 <br>
+
 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
 <div id="mc_embed_signup">
-<form action="//gnelsonj.us6.list-manage.com/subscribe/post?u=08208a8f14640e10c7666754e&amp;id=2e5f3192e1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<label for="mce-EMAIL">Follow Andy &amp; Nelson's Startup Journey</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_08208a8f14640e10c7666754e_2e5f3192e1" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
+  <form action="//gnelsonj.us6.list-manage.com/subscribe/post?u=08208a8f14640e10c7666754e&amp;id=2e5f3192e1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="\_blank" novalidate>
+      <div id="mc_embed_signup_scroll">
+  	<label for="mce-EMAIL">Follow Andy &amp; Nelson's Startup Journey</label>
+  	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+      <div style="position: absolute; left: -5000px;"><input type="text" name="b_08208a8f14640e10c7666754e_2e5f3192e1" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+      </div>
+  </form>
 </div>
 
 [1]: http://twitter.com/andygcook "Andy Cook"
