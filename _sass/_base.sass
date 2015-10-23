@@ -80,6 +80,9 @@ ul, ol
     margin: 0
     padding: 0
 
+    @media all and (max-width: 35em)
+        +remFallback("padding-left", 1)
+
     &.unstyled
         list-style: none
 
