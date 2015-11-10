@@ -36,7 +36,7 @@ Andy and I are really excited about our next idea. We’re not ready to talk abo
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 </style>
 <div id="mc_embed_signup">
-  <form action="//gnelsonj.us6.list-manage.com/subscribe/post?u=08208a8f14640e10c7666754e&amp;id=2e5f3192e1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="\_blank" novalidate>
+  <form action="//gnelsonj.us6.list-manage.com/subscribe/post?u=08208a8f14640e10c7666754e&amp;id=2e5f3192e1&amp;SIGNUP_LOC=gnelsonj" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="\_blank" novalidate>
       <div id="mc_embed_signup_scroll">
   	<label for="mce-EMAIL">Follow Andy &amp; Nelson's Startup Journey</label>
   	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
