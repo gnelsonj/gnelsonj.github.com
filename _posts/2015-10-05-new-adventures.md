@@ -3,15 +3,15 @@ layout: post
 title: Moving on to New Adventures
 ---
 
-“Once you guys raise money in a few months, I’ll rejoin you at your startup”, that was the agreement I made with [Andy Cook][1] Back in March 2011. He was a tenacious startup founder, but him and his brother just didn’t have the funding to pay me a salary.
+“Once you raise money in a few months, I’ll rejoin you guys at Rentabilities", that was the agreement I made with [Andy Cook][1] Back in March 2011. He was a tenacious startup founder, but him and his brother just didn’t have the funding to pay me a salary.
 
-With my student loan repayments looming, I had to find a ‘real’ job. I ended up at an up and coming startup called [HubSpot][2]. More than a few months passed (54 in fact), but I’m making good on that promise to Andy, and we’re setting out to start a company of our own.
+As a recent grad with student loan payments looming, I had to find a ‘real’ job. So I joined a small but up-and-coming startup called [HubSpot][2]. More than a few months passed (54 in fact), but I’m making good on that promise to Andy. We’re setting out to start a company of our own.
 
-Compared to the 3-man team at [Rentabilities][3], the ~160 person HubSpot felt like a ‘big company’. HubSpot had just raised a 32 million dollar series D and were growing fast. During that period it wasn’t unusual for 50+ new employees to join any given month.
+Compared to our 3-man team at [Rentabilities][3], the ~160 person HubSpot felt like a ‘big company’. They had just raised a 32 million dollar series D and were growing fast. During my time there it wasn’t unusual for 50+ new employees to join in any given month.
 
-I had the privilege to be one of the inaugural members of the HubSpot UX team lead by [Joshua Porter][4]. When I started, I had never been a designer, but Josh took me under his wing. For over two years I honed my design skills working with Josh, [Dan Ritz][5], and a handful of other great designers.
+I had the privilege to be an inaugural member of the HubSpot UX team lead by [Joshua Porter][4].  I had never been a designer, but Josh took me under his wing. For over two years I honed my design skills working with Josh, [Dan Ritz][5], and a handful of other great designers.
 
-In October 2013 I got an unusual phone call from then VP of Engineering Elias Torres. HubSpot was acquiring Andy’s company Rentabilities. Elias asked if I was up for working with Andy on a ‘startup with a startup’. It was an easy answer.
+In October 2013 I got an unusual phone call from the VP of Engineering, Elias Torres. HubSpot was acquiring Andy’s company Rentabilities. Elias asked if I was up for working with Andy on a ‘startup within a startup’. It was an easy yes.
 
 We only had 3 ‘guardrails’ when we started:
 
