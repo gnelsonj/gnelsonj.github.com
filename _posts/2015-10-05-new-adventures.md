@@ -27,24 +27,7 @@ HubSpot is a special place that has two incredible founders and no true peer in 
 
 It’s also a place that [breeds great entrepreneurs][7]. [Dharmesh Shah][8] (Founder and CTO of HubSpot), has publicly said, “we’ve wanted to not just build a great company, but also build some great entrepreneurs”. This attitude is why I have so much confidence in what Andy and I can achieve.
 
-Andy and I are really excited about our next idea. We’re not ready to talk about it publicly yet (it’s only day 1), but if you’re interested in following along with our journey, you can sign up below.
-
-<br>
-
-<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-</style>
-<div id="mc_embed_signup">
-  <form action="//gnelsonj.us6.list-manage.com/subscribe/post?u=08208a8f14640e10c7666754e&amp;id=2e5f3192e1&amp;SIGNUP_LOC=gnelsonj" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="\_blank" novalidate>
-      <div id="mc_embed_signup_scroll">
-  	<label for="mce-EMAIL">Follow Andy &amp; Nelson's Startup Journey</label>
-  	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-      <div style="position: absolute; left: -5000px;"><input type="text" name="b_08208a8f14640e10c7666754e_2e5f3192e1" tabindex="-1" value=""></div>
-      <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-      </div>
-  </form>
-</div>
+Andy and I are really excited about our next idea.
 
 [1]: http://twitter.com/andygcook "Andy Cook"
 [2]: http://hubspot.com "HubSpot"
